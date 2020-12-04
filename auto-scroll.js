@@ -21,7 +21,7 @@ $(document).ready(function(){
           var window_position = $('#' + id_name_eq).offset().top;
           if (old_position === window_position){
 
-            if(delta < 0 && window_position != $('.scroll-auto:eq(2)').offset().top){
+            if(delta < 0 && window_position != $('.scroll-auto:eq('+ ($('.scroll-auto').length - 1) +')').offset().top){
               id_name_eq_new = $('.scroll-auto:eq( '+ (i+1) +' )').attr('id');
               old_position = $('#' + id_name_eq_new).offset().top;
               $('html, body').animate({
